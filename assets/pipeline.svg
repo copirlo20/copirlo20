@@ -1,0 +1,69 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1000" height="330" viewBox="0 0 1000 330">
+  <defs>
+    <style>
+      .box{fill:#0f1b2d;stroke:#1e3a44;stroke-width:2}
+      .glow{animation:glow 3s ease-in-out infinite}
+      .d1{animation-delay:.6s}.d2{animation-delay:1.2s}.d3{animation-delay:1.8s}.d4{animation-delay:2.4s}
+      .t{font:700 16px 'Segoe UI',Helvetica,Arial,sans-serif;fill:#f8fafc}
+      .s{font:500 12.5px 'Segoe UI',Helvetica,Arial,sans-serif;fill:#94a3b8}
+      .h{font:600 13px 'Consolas','Courier New',monospace;fill:#2dd4bf}
+      .line{stroke:#1e3a44;stroke-width:3;fill:none}
+      .flow{stroke:#2dd4bf;stroke-width:3;fill:none;stroke-dasharray:8 12;animation:dash 1.2s linear infinite}
+      @keyframes dash{to{stroke-dashoffset:-20}}
+      @keyframes glow{0%,100%{stroke:#1e3a44}50%{stroke:#2dd4bf}}
+    </style>
+  </defs>
+
+  <rect width="1000" height="330" rx="16" fill="#0b1220"/>
+  <text class="h" x="30" y="38">// how I build: request → service → storage → pipeline → insight</text>
+
+  <!-- docker boundary -->
+  <rect x="215" y="85" width="580" height="160" rx="14" fill="none" stroke="#38bdf8" stroke-width="1.5" stroke-dasharray="6 6" opacity=".7"/>
+  <text x="228" y="276" font-family="Segoe UI,Arial,sans-serif" font-size="12.5" fill="#38bdf8">Docker containers · CI/CD with GitHub Actions</text>
+
+  <!-- connectors -->
+  <path id="p1" class="line" d="M180 165H230"/>
+  <path id="p2" class="line" d="M380 165H430"/>
+  <path id="p3" class="line" d="M580 165H630"/>
+  <path id="p4" class="line" d="M780 165H830"/>
+  <path class="flow" d="M180 165H230"/>
+  <path class="flow" d="M380 165H430"/>
+  <path class="flow" d="M580 165H630"/>
+  <path class="flow" d="M780 165H830"/>
+
+  <!-- moving packets across the whole flow -->
+  <path id="all" d="M105 165H905" fill="none"/>
+  <circle r="6" fill="#38bdf8"><animateMotion dur="4s" repeatCount="indefinite"><mpath href="#all"/></animateMotion></circle>
+  <circle r="5" fill="#a78bfa"><animateMotion dur="4s" begin="1.3s" repeatCount="indefinite"><mpath href="#all"/></animateMotion></circle>
+  <circle r="4" fill="#2dd4bf"><animateMotion dur="4s" begin="2.6s" repeatCount="indefinite"><mpath href="#all"/></animateMotion></circle>
+
+  <!-- nodes -->
+  <rect class="box glow" x="30" y="115" width="150" height="100" rx="12"/>
+  <text class="t" x="105" y="155" text-anchor="middle">Clients</text>
+  <text class="s" x="105" y="178" text-anchor="middle">React</text>
+  <text class="s" x="105" y="196" text-anchor="middle">React Native</text>
+
+  <rect class="box glow d1" x="230" y="115" width="150" height="100" rx="12"/>
+  <text class="t" x="305" y="155" text-anchor="middle">API Services</text>
+  <text class="s" x="305" y="178" text-anchor="middle">Spring Boot · .NET</text>
+  <text class="s" x="305" y="196" text-anchor="middle">Node.js</text>
+
+  <rect class="box glow d2" x="430" y="115" width="150" height="100" rx="12"/>
+  <text class="t" x="505" y="155" text-anchor="middle">Storage</text>
+  <text class="s" x="505" y="178" text-anchor="middle">SQL · NoSQL</text>
+  <text class="s" x="505" y="196" text-anchor="middle">Entity Framework</text>
+
+  <rect class="box glow d3" x="630" y="115" width="150" height="100" rx="12"/>
+  <text class="t" x="705" y="155" text-anchor="middle">Data Pipeline</text>
+  <text class="s" x="705" y="178" text-anchor="middle">Python ETL / ELT</text>
+  <text class="s" x="705" y="196" text-anchor="middle">Batch · Streaming</text>
+
+  <rect class="box glow d4" x="830" y="115" width="150" height="100" rx="12"/>
+  <text class="t" x="905" y="155" text-anchor="middle">Insights</text>
+  <text class="s" x="905" y="178" text-anchor="middle">Reports</text>
+  <text class="s" x="905" y="196" text-anchor="middle">Dashboards</text>
+
+  <!-- AI strip -->
+  <rect x="30" y="292" width="940" height="1" fill="#1e3a44"/>
+  <text x="500" y="316" text-anchor="middle" font-family="Consolas,monospace" font-size="13" fill="#a78bfa">⚡ accelerated with Claude Code &amp; Codex</text>
+</svg>
